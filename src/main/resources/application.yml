@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fix_proxy
+    username: fix_proxy
+    password: fix_proxy
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 7070
+
+app:
+  security:
+    jwt:
+      secret-key: caroserie
+      access-token-life: 3600000 # 1 hour
+      refresh-token-life: 604800000 # 168 hours
