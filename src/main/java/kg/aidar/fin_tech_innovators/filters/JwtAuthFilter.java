@@ -47,10 +47,10 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             }
         } catch (TokenExpiredException e) {
             // Handle token expiration
-            return;
+            throw new RuntimeException("Token expired");
         } catch (Exception e) {
             // Handle other exceptions
-            return;
+            throw new RuntimeException("Token expired");
         }
 
         filterChain.doFilter(request, response);

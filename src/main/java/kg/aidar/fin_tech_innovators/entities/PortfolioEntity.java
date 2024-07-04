@@ -22,6 +22,7 @@ public class PortfolioEntity {
     @ManyToOne
     UserEntity owner;
 
+    @Column(nullable = false, unique = true)
     String requisite;
 
     BigDecimal balance;
