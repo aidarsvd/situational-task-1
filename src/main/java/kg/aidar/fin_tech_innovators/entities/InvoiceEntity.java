@@ -26,10 +26,10 @@ public class InvoiceEntity {
 
     LocalDateTime createdAt;
 
-    @OneToOne
+    @ManyToOne
     PortfolioEntity sender;
 
-    @OneToOne
+    @ManyToOne
     PortfolioEntity recipient;
 
     BigDecimal amount;
@@ -37,4 +37,14 @@ public class InvoiceEntity {
     @Enumerated(EnumType.STRING)
     InvoiceStatus status;
 
+    @PrePersist
+    public void prePersist() {
+        this.createdAt = LocalDateTime.now();
+        this.receipt = UUID.randomUUID();
+    }
+
+
+    public InvoiceEntity(BigDecimal amount) {
+        this.amount = amount;
+    }
 }

@@ -1,5 +1,10 @@
 package kg.aidar.fin_tech_innovators.enums;
 
 public enum InvoiceStatus {
-    NEW, PAYED, DELETED, REJECTED, CANCELED
+    PAYED,
+    DELETED,
+    REJECTED,
+    CANCELED,
+    RECIPIENT_NOT_EXIST,
+    INSUFFICIENT_BALANCE
 }
