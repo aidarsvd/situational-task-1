@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.math.BigDecimal;
+import java.util.List;
+
 
 @Entity
 @Table(
@@ -31,5 +34,8 @@ public class UserEntity {
     String password;
 
     boolean isEnabled;
+
+    @OneToMany(mappedBy = "owner")
+    List<PortfolioEntity> portfolio;
 
 }
