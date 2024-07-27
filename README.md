@@ -1,5 +1,9 @@
 # Fin Tech Innovators
 
+## YouTube video demonstration
+https://youtu.be/mnssFyXrnK8
+
+
 The application for processing the payment between users.
 
 
@@ -7,7 +11,6 @@ The application for processing the payment between users.
 #### Language / Framework
 - Java Oracle OpenJDK 17
 - Spring Boot 3.2.2
-- QuickFIX/J 2.3.1
 
 #### DBMS
 - PostgreSQL
