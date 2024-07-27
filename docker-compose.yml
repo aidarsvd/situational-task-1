@@ -1,0 +1,15 @@
+version: '3'
+services:
+  caroserie_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fintech_innovators
+    ports:
+      - "7070:7070"
+    networks:
+      - caroserie_network
+
+networks:
+  caroserie_network:
+    external: true
